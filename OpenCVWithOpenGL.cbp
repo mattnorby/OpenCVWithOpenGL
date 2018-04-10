@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="OpenCVWithOpenGL" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/OpenCVWithOpenGL" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:/glut-3.7.6-bin/bin" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/OpenCVWithOpenGL" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:/glut-3.7.6-bin/bin" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Environment>
+				<Variable name="CV_VERSION" value="320" />
+			</Environment>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:/OpenCV32/opencv/build/include" />
+			<Add directory="C:/glut-3.7.6-bin/include" />
+		</Compiler>
+		<Linker>
+			<Add library="opencv_imgproc$(CV_VERSION).dll" />
+			<Add library="opencv_core$(CV_VERSION).dll" />
+			<Add library="opencv_highgui$(CV_VERSION).dll" />
+			<Add library="opencv_imgcodecs$(CV_VERSION).dll" />
+			<Add library="glut32" />
+			<Add library="opengl32" />
+			<Add library="glu32" />
+			<Add library="winmm" />
+			<Add library="gdi32" />
+			<Add directory="C:/OpenCV32/opencv/build/x86/mingw/bin" />
+			<Add directory="C:/OpenCV32/opencv/build/x86/mingw/lib" />
+			<Add directory="C:/glut-3.7.6-bin/lib" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Unit filename="ohio.jpg" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
